@@ -101,7 +101,9 @@
 
 // console.log(circleArea(5.2)); // PI is being used *inside* this function
 // const PI = 3.14;
-// console.log(PI); // You will get an error. The variable is not accessible.
+// console.log(PI);
+// You will get an error.
+// The variable is not accessible, unless you also import PI. {circleArea,PI};
 
 // Calc Bill
 // import { calculateBill } from './tripCost.js';
@@ -126,3 +128,60 @@
 // import * as maths from './maths.js';
 // console.log(maths.add(2, 3));
 // console.log(maths.subtract(7, 8));
+
+// import * as css from './CSSConversions.js';
+
+// console.log(css.rgbToHex1(0, 51, 255));
+// // // #0033ff
+// console.log(css.hexToRgb('#0033ff'));
+
+// DISK READING
+// Import readFile function from global fs module. fs stands for file system.
+// import { readFile } from 'fs';
+
+// Disk Reading P2
+// import { readFile } from 'fs';
+
+// const handleFileRead = (error, content) => {
+//   // Split the content of our file by lines
+//   const lines = content.split('\n');
+// -> split creates an array , is the identifier
+
+//   // For each line, log the line number and the content of that line
+//   for (let i = 0; i < lines.length; i += 1) {
+//     console.log(`Line ${i + 1}: ${lines[i]}`);
+//   }
+// };
+
+// readFile('mystuff.txt', 'utf8', handleFileRead);
+
+// dk how to do the absolute path thing.
+
+import * as css from './CSSConversions.js';
+
+console.log(css.componentToHex(0, 51, 255));
+
+// // 1
+// console.log('done importing from fs');
+
+// // Define callback function to run after retrieving file contents in readFile
+// // 4
+// const handleFileRead = (error, content) => {
+//   console.log('running inside of handleFileRead');
+
+//   // Handle errors if any
+//   if (error) {
+//     console.log('read error', error);
+//     return;
+//   }
+//   // 5
+//   console.log('content', content);
+// };
+// // 2
+// console.log('about to call readFile');
+
+// // 2nd param 'utf8' specifies the file encoding.
+// // Read more about UTF8 here: https://en.wikipedia.org/wiki/UTF-8
+// readFile('mystuff.txt', 'utf8', handleFileRead);
+// // 3
+// console.log('done calling readFile');
