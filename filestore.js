@@ -1,8 +1,9 @@
 import { writeFile } from 'fs';
 
-const filename = 'data.json';
+// write('data.json', myData);
+// Where myData was defined as, const myData = { name: 'kai' };
 
-export function Write(filename, jsonContentObj) {
+export function write(filename, jsonContentObj) {
   // Convert the data from JS Object to string
   const jsonContentStr = JSON.stringify(jsonContentObj);
 

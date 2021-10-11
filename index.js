@@ -1,4 +1,4 @@
-import { write } from '../jsonFileStorage.js';
+import { write } from './filestore.js';
 
 // Get some data from our app
 const myData = { name: 'kai' };
